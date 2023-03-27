@@ -2,7 +2,7 @@ import React from 'react'
 import { Text,View,Image,Pressable } from 'react-native'
 import { Ionicons } from '@expo/vector-icons';
 
-const Card = ({id,image,title,price,isHorizontal,viewModalHandler}) => {
+const MyCard = ({id,image,title,price,isHorizontal,viewModalHandler}) => {
   return (
      <View   className="px-2 w-full my-3">
         <View className="relative">
@@ -28,4 +28,4 @@ const Card = ({id,image,title,price,isHorizontal,viewModalHandler}) => {
   )
 }
 
-export default Card
+export default MyCard

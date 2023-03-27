@@ -5,7 +5,7 @@ import { StatusBar } from 'expo-status-bar';
 import { Feather } from '@expo/vector-icons';
 import { FontAwesome } from '@expo/vector-icons';
 import { filter } from './screen/components/Data';
-import Card from './screen/components/Card';
+import MyCard from './screen/components/Card';
 import { Articles } from './screen/components/Data';
 import Single from './screen/components/Single';
 import { SimpleGrid } from 'react-native-super-grid';
@@ -72,7 +72,7 @@ export default function App() {
                  itemDimension={120}
                  spacing={4}
                  data={Articles}
-                 renderItem={({item})=><Card   viewModalHandler={()=>viewArticleHandler(item.title,item.image,item.price)} title={item.title} image={item.image} price={item.price} key={item.id} />}
+                 renderItem={({item})=><MyCard   viewModalHandler={()=>viewArticleHandler(item.title,item.image,item.price)} title={item.title} image={item.image} price={item.price} key={item.id} />}
             />
 
       </ScrollView>
