@@ -8,11 +8,11 @@ import {topUpProducts} from "../../constant/Data"
 const WomenScreen = () => {
 
   return (
-    <View>
+    <View className="pb-20">
       {/* activewaer */}
       <Category title="Activewear" products={products}/>
       <Category title="Up to 50% Off" products={topUpProducts}/>
-
+      <Category title="Top Shirt" products={products}/>
           
 
     </View>

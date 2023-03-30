@@ -8,7 +8,7 @@ import ShopCategory from './ShopCategory';
 const Category = ({title,products}) => {
     const [isViewModalShop, setIsViewModalShop] = useState(false);
   return (
-    <View className="px-4 pt-8">
+    <View className="pt-8">
        <View>
             <View className="flex flex-row items-center justify-between px-5">
                 <Text className="uppercase text-2xl text-primary-300 font-bold">{title}</Text>
@@ -18,13 +18,13 @@ const Category = ({title,products}) => {
                     </Pressable>
             </View>
                
-                <ScrollView horizontal={true} className="py-5 pl-3  pr-20">
+                <ScrollView horizontal={true} className=" py-5 pl-3  pr-20">
                     {products.map((item)=><PrimaryCard key={item.id} price={item.price} description={item.description} image={item.image} id={item.id}/>)}
                 </ScrollView>
 
           </View>
 
-          {isViewModalShop && <Modal animationType='slide'><ShopCategory onViewModal={()=>setIsViewModalShop(false)} products={products} title={title}/></Modal>}
+          {isViewModalShop && <Modal animationType='slide' transparent={true}><ShopCategory onViewModal={()=>setIsViewModalShop(false)} products={products} title={title}/></Modal>}
     </View>
   )
 }
